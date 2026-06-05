@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
@@ -69,6 +70,15 @@ export default function LoginPage() {
         >
           Login
         </button>
+        <p className="mt-4 text-center text-slate-600">
+          Don't have an account?{" "}
+          <Link
+            href="/signup"
+            className="font-medium text-blue-600 hover:text-blue-700"
+          >
+            Sign Up
+          </Link>
+        </p>
       </form>
     </main>
   );
