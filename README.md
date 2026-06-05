@@ -1,6 +1,6 @@
 # CampusIQ — Find the right campus
 
-🌐 **Live Demo:** [https://YOUR-VERCEL-URL.vercel.app](https://campus-iq-six.vercel.app/)
+🌐 **Live Demo:** [CampusIQ-live website](https://campus-iq-six.vercel.app/)
 
 📂 **GitHub:** https://github.com/KrishitaMyneni/CampusIQ
 
