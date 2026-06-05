@@ -2,7 +2,7 @@
 
 🌐 **Live Demo:** [https://YOUR-VERCEL-URL.vercel.app](https://campus-iq-six.vercel.app/)
 
-📂 **GitHub:** --
+📂 **GitHub:** https://github.com/KrishitaMyneni/CampusIQ
 
 ---
 
@@ -143,23 +143,27 @@ Profile includes:
 
 ### Home Page
 
-Add screenshot here
+<img width="2531" height="1384" alt="image" src="https://github.com/user-attachments/assets/26c4213e-bde7-4969-a4d0-2c966497d365" />
+
 
 ### College Details
 
-Add screenshot here
+<img width="2527" height="1362" alt="image" src="https://github.com/user-attachments/assets/09869702-861f-48c9-8c44-604a29f872b4" />
+
 
 ### College Comparison
 
-Add screenshot here
+<img width="2527" height="1365" alt="image" src="https://github.com/user-attachments/assets/849a11b7-235a-425d-9920-cab2211cd690" />
 
 ### Discussions
 
-Add screenshot here
+<img width="2525" height="1381" alt="image" src="https://github.com/user-attachments/assets/2803783b-7546-4b3e-a21c-e707055aed5d" />
+
 
 ### Recommendations
 
-Add screenshot here
+<img width="2515" height="1394" alt="image" src="https://github.com/user-attachments/assets/f6467fdc-275f-42c3-82f9-7ec7ebb2d17f" />
+
 
 ---
 
@@ -168,9 +172,9 @@ Add screenshot here
 ### Clone Repository
 
 ```bash
-git clone https://github.com/KrishitaMyneni/CampusIQ-college-discovery-platform.git
+git clone https://github.com/KrishitaMyneni/CampusIQ.git
 
-cd CampusIQ-college-discovery-platform
+cd CampusIQ
 ```
 
 ### Install Dependencies
