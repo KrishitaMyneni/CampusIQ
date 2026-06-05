@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id               String            @id @default(cuid())
+  name             String?
+  email            String            @unique
+  password         String
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  savedColleges    SavedCollege[]
+  savedComparisons SavedComparison[]
+  questions        Question[]
+  answers          Answer[]
+}
+
+model College {
+  id              Int            @id @default(autoincrement())
+  name            String
+  location        String
+  fees            Int
+  rating          Float
+  description     String
+
+  courses         String[]
+  highestPackage  Int
+  averagePackage  Int
+  placementRate   Int
+  reviewSummary   String
+
+  createdAt       DateTime       @default(now())
+  savedBy         SavedCollege[]
+  questions       Question[]
+}
+
+model SavedCollege {
+  id        Int     @id @default(autoincrement())
+  userId    String
+  collegeId Int
+  college   College @relation(fields: [collegeId], references: [id])
+  user      User    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, collegeId])
+}
+
+model SavedComparison {
+  id         Int      @id @default(autoincrement())
+
+  userId     String
+
+  college1Id Int
+  college2Id Int
+
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, college1Id, college2Id])
+}
+
+model Question {
+  id        Int      @id @default(autoincrement())
+  title     String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  collegeId Int?
+  college   College? @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  answers   Answer[]
+
+  @@index([createdAt])
+  @@index([userId])
+  @@index([collegeId])
+}
+
+model Answer {
+  id         Int      @id @default(autoincrement())
+  content    String
+  questionId Int
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  createdAt  DateTime @default(now())
+
+  @@index([questionId])
+  @@index([userId])
+  @@index([createdAt])
+}
